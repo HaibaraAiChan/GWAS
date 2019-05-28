@@ -37,10 +37,13 @@ hunter     | test | 9,000 | ? | NO
     26) sheet: 2ry structure of the protein (feature)
     27) Entropy: the degree of freedom for this SNP (feature)
     28) P-value  
-    ```
+    ```  
+    use features as the input of MLP, predict the p-value. The null hypothesis is SNPs has relationship with disease.  
+    The p-value indicates how extreme the data are. The smaller p-value is,  more difficult to reject the null hypothesis.
+    Which is means, the possibilty of asssociation between SNPs and disease is higher.  
     
 * **test dataset**   
-	- [ ]  hunter  
+	- [ ]  hunter    
 	
 * **MLP model:**  
 		**input:**        

@@ -38,6 +38,26 @@ hunter     | test | 9,000 | ? | NO
     27) Entropy: the degree of freedom for this SNP (feature)
     28) P-value  
     ```  
+    features:  
+     ```   
+    1. wildtype_value,
+    2. Blosum62_wt,
+    3. mutant_value,
+    4. Blosum62_mu,
+    5. disorder,
+    6. confidence,
+    7. core,
+    8. NIS,
+    9. Interface,
+    10. HBO,
+    11. SBR,
+    12. Aromatic interaction,
+    13. Hydrophobic Interaction,
+    14. helix,
+    15. coil,
+    16. sheet,
+    17. Entropy
+     ```
     use features as the input of MLP, predict the p-value. The null hypothesis is SNPs has relationship with disease.  
     The p-value indicates how extreme the data are. The smaller p-value is,  more difficult to reject the null hypothesis.
     Which is means, the possibilty of asssociation between SNPs and disease is higher.  

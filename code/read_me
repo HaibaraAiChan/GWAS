@@ -1,1 +1,24 @@
-except prepare_data.py file, other files are not correct files, not use 
+####  except 'prepare_data.py' file, other files are not correct files,do not use  (they're included to a model with bad performance)
+
+####  'adjust_h_param.py' is used to find the best performance model parameter.  
+            it will run all the combination of different hyperparameters' lists.
+        
+                   tuned_parameters = {'batch_size': [32,64],
+                        'epochs': [90,120],
+                        'callbacks': [[EarlyStopping(monitor='val_loss', patience=1, mode='min'),
+                                      ModelCheckpoint('.mdl_wts.hdf5', save_best_only=True, monitor='val_loss',
+                                        mode='min'),
+                                      ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, verbose=1,
+                                        in_delta=1e-4, mode='min')
+                                      ]],
+                        'verbose': [2],
+
+                        'validation_data': [(valid_data, v_y)],
+                        'class_weight':[{0: weight_n, 1: weight_p}]
+                        }
+          
+  ## 'main_cross_valid.py' is used for training(after 'adjust_h_parameter.py' choose a group of best hyper parameters)
+  
+  ## 'predict_self.py' is used to prediction(you can choose the total dataset, not just the prediction part data)
+                                             (or choose the prediction part data folder, to see the performance of model)
+

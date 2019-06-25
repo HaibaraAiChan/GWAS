@@ -3,7 +3,7 @@
 DataSet | func | patients num | SNPs num | p-value
 ------------ | ------------- | ------------- | ------------- | -------------
 michailidu | train | 250,000 | 51,000 | YES
-hunter     | test | 9,000 | ? | NO  
+hunter     | test | 9,000 | 4,455 | NO  
 
 * **training dataset** 
 
